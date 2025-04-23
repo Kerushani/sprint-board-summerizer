@@ -57,6 +57,9 @@ def summarize_sprint(issues):
 
         with open("sample-feilds.txt", "w") as f:
             f.write(json.dumps(issue, indent=2))
+
+        # this feild can change based on where story points feild is stored on the application
+        # replace with correct feild name
         story_points = fields.get("customfield_10003", 0)
 
         summary["total_issues"] += 1
